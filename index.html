@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estudos</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <main class="container">
+        <section class="app-estudos">
+            <header>
+                <h2>📚 Controle de Estudos</h2>
+                <div class="resumo-painel">
+                    <p>Total de Horas Estudadas: <strong id="total-horas-global">0h</strong></p>
+                </div>
+            </header>
+
+            <div class="area-cadastro">
+                <h3>Nova Disciplina</h3>
+                
+                <input type="text" id="input-disciplina" placeholder="Nome da disciplina...">
+                <input type="text" id="input-professor" placeholder="Professor responsável...">
+                
+                <div class="linha-inputs">
+                    <div class="grupo-input">
+                        <label for="input-carga">Carga Horária Total (h):</label>
+                        <input type="number" id="input-carga" placeholder="Ex: 80" min="1">
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="select-area">Área do Conhecimento:</label>
+                        <select id="select-area">
+                            <option value="Exatas">Exatas</option>
+                            <option value="Humanas">Humanas</option>
+                            <option value="Biológicas">Biológicas</option>
+                            <option value="Tecnologia" selected>Tecnologia</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button id="btn-cadastrar">Cadastrar Disciplina</button>
+            </div>
+
+            <div class="area-lista">
+                <h3>Minhas Disciplinas</h3>
+                <p id="mensagem-vazia" style="text-align: center; color: #888; margin-top: 20px;">
+                    Nenhuma disciplina cadastrada ainda.
+                </p>
+                
+                <ul id="lista-disciplinas">
+                    </ul>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient( 135deg, #0053be 0%, #002857 100%);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* PRINCIPAL*/
+.app-estudos {
+    width: 100%;
+    max-width: 900px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.resumo-painel {
+    background: #eef2f5;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-size: 16px;
+    color: #555;
+    border: 1px solid #dce4ec;
+}
+
+.resumo-painel strong {
+    color: #007bff;
+    font-size: 22px;
+}
+
+/*FORMULÁRIO*/
+.area-cadastro {
+    background: #fafafa;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #eaeaea;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.area-cadastro h3, .area-lista h3 {
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+    background: #fff;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.15);
+}
+
+.linha-inputs {
+    display: flex;
+    gap: 20px;
+}
+
+.grupo-input {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grupo-input label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    padding-left: 5px;
+}
+#btn-cadastrar {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+#btn-cadastrar:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/* --- BOTÕES DOS CARDS DAS DISCIPLINAS --- */
+.acoes-card button {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-right: 5px;
+}
+
+.btn-horas {
+    background: #28a745;
+    color: white;
+}
+.btn-horas:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+.btn-editar {
+    background: #ffc107;
+    color: #333;
+}
+.btn-editar:hover {
+    background: #e0a800;
+    transform: scale(1.05);
+}
+.btn-excluir {
+    background: #ff4c4c;
+    color: white;
+    margin-right: 0;
+}
+.btn-excluir:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+}
+
+/*CELULAR*/
+@media (max-width: 600px) {
+    .app-estudos {
+        padding: 30px 20px;
+    }
+    
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .linha-inputs {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
